@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "505512492430",
+    "firebase_url": "https://homework10-d70d5-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "homework10-d70d5",
+    "storage_bucket": "homework10-d70d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505512492430:android:fa5560f60c340dfb2c38df",
+        "android_client_info": {
+          "package_name": "ru.netology.nmedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgN6IoBHA47J5kWNEYaFXkrSs5KfzS2VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
