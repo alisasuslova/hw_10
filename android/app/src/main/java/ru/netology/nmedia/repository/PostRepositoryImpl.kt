@@ -1,6 +1,7 @@
 package ru.netology.nmedia.repository
 
 import androidx.lifecycle.*
+import androidx.room.util.copy
 import okio.IOException
 import ru.netology.nmedia.api.*
 import ru.netology.nmedia.dao.PostDao
@@ -51,7 +52,16 @@ class PostRepositoryImpl(private val dao: PostDao) : PostRepository {
         TODO("Not yet implemented")
     }
 
-    override suspend fun likeById(id: Long) {
-        TODO("Not yet implemented")
+    override suspend fun likeById(id: Long): Post {
+        try {
+            val oldPost = PostsApi.service.likeById(id)
+            val newPost = oldPost.copy(likedByMe = !oldPost.likedByMe)
+
+            return newPost
+        } catch (e: IOException) {
+            throw NetworkError
+        } catch (e: Exception) {
+            throw UnknownError
+        }
     }
 }
